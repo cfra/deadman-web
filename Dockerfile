@@ -19,6 +19,7 @@ ENV DEADMAN_CHECKSUM=b308eb5774396574b8f65a39c4093510646a1ccf9526b1c50db0c242b04
 RUN cd /home/deadman \
     && curl -fSsL "https://github.com/upa/deadman/archive/${DEADMAN_VERSION}.zip" \
             -o deadman.zip \
+    && echo "${DEADMAN_CHECKSUM}  deadman.zip" | sha256sum -c - \
     && unzip "deadman.zip" \
     && rm -f "deadman.zip" \
     && mv "deadman-${DEADMAN_VERSION}" "deadman"
