@@ -1,4 +1,4 @@
-FROM alpine:3.9@sha256:83b1acd99b0684c620e2a883b8e317c684979bd61cbf33bc4e4fe863950f6866
+FROM alpine:3.9@sha256:4ed6618af6841c844f9eb692e4d00cae9e7a55b66e118fcf212c1796094ba707
 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories
 RUN apk add --update --no-cache \
