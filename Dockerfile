@@ -13,8 +13,8 @@ COPY dark.css /etc/shellinabox/dark.css
 RUN addgroup -g 1001 deadman \
      && adduser -D -G deadman -u 1001 deadman
 
-ENV DEADMAN_VERSION=247db0692109e6b32ea5c304c2e871bc0741dc7f
-ENV DEADMAN_CHECKSUM=41901e6b4e5ab4744eae6d1f1e2a409b062353b39aa6cd1bd13d7a193b98afcb
+ENV DEADMAN_VERSION=cdbd55d3f77358ccc07d14cca293a3a124635e55
+ENV DEADMAN_CHECKSUM=a0bda388649e2641ed59a59c027f771cd19564c7ab62f38081a4cee25d59a639
 
 RUN cd /home/deadman \
     && curl -fSsL "https://github.com/upa/deadman/archive/${DEADMAN_VERSION}.zip" \
