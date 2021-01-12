@@ -4,7 +4,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
 RUN apk add --update --no-cache \
     curl \
     iputils \
-    python \
+    python3 \
     shellinabox
 
 COPY docker-entrypoint.sh /usr/bin
@@ -13,8 +13,8 @@ COPY dark.css /etc/shellinabox/dark.css
 RUN addgroup -g 1001 deadman \
      && adduser -D -G deadman -u 1001 deadman
 
-ENV DEADMAN_VERSION=cdbd55d3f77358ccc07d14cca293a3a124635e55
-ENV DEADMAN_CHECKSUM=a0bda388649e2641ed59a59c027f771cd19564c7ab62f38081a4cee25d59a639
+ENV DEADMAN_VERSION=662dbe60021978b85932c4e95864e9e8827804b9
+ENV DEADMAN_CHECKSUM=ef19b5753f5867bfc4fa09d5be7702603bb6b45ab659ca2803e2f758001ade12
 
 RUN cd /home/deadman \
     && curl -fSsL "https://github.com/upa/deadman/archive/${DEADMAN_VERSION}.zip" \
